@@ -1,6 +1,7 @@
 import React from 'react';
 import useCart from '../../hooks/UseCart';
 import useProducts from '../../hooks/UseProducts';
+import { removeFromDb } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart'
 import ReviewItem from '../ReviewItem/ReviewItem';
 
@@ -11,6 +12,8 @@ const Orders = () => {
         // Here, we are selecting the rest of the items and setting those items to state
         const restItems = cart.filter(pd => pd.id !== product.id)
         handleCart(restItems)
+        // deleting from local storage
+        removeFromDb(product.id)
     }
     return (
         <div className='shop-container'>
