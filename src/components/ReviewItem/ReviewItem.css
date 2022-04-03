@@ -16,3 +16,21 @@
     justify-content: space-between;
     width: 100%;
 }
+
+.delete-btn {
+    width: 60px;
+    height: 60px;
+    border: 0;
+    background-color: rgb(255, 233, 237);
+    border-radius: 50%;
+}
+
+.trash-icon {
+    color: lightcoral;
+    height: 27px;
+}
+
+.delete-container {
+    display: flex;
+    align-items: center;
+}
