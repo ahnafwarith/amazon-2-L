@@ -1,10 +1,11 @@
 import React from 'react';
+import './ReviewItem.css'
 
 const ReviewItem = (props) => {
-    const { name } = props.product
+    const { name, img, price, shipping, quantity } = props.product
     return (
-        <div>
-            <h3>Product name: {name}</h3>
+        <div className='review-item'>
+            <h3>This is a review item: {name}</h3>
         </div>
     );
 };
